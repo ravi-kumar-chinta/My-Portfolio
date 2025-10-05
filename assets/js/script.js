@@ -1,4 +1,4 @@
- // Function to set the theme and update UI
+// Function to set the theme and update UI
  function setTheme(theme) {
     document.body.setAttribute('data-bs-theme', theme);
     localStorage.setItem('theme', theme);
@@ -52,6 +52,18 @@ function scrollToTop(){
     document.documentElement.scrollTop = 0;
 }
 
+// Functionality for the Home section scroll down animation
+function scrollToNextSection(targetSelector) {
+    const targetElement = document.querySelector(targetSelector);
+    if (targetElement) {
+        // Use smooth scroll behavior
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+
 //Testimonial Slider
 $(document).ready(function(){
     $("#testimonial-slider").owlCarousel({
@@ -80,6 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const cursorDot = document.querySelector('.cursor-dot');
   const cursorOutline = document.querySelector('.cursor-outline');
   let mouseStopTimeout;
+  
+  // Define all interactive elements explicitly for the custom cursor.
+  // We need to fetch these elements before adding event listeners.
+  const interactiveElements = document.querySelectorAll(
+    'a, button, input, textarea, .project-card, .skill, .tool, .tab-btn, .scroll-button-container'
+  );
+
 
   // Move cursor elements
   window.addEventListener('mousemove', (e) => {
@@ -105,10 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Handle hover effects
- // const interactiveElements = document.querySelectorAll(
-    /*'a, button, input, textarea, p, h1, h2, h3, h4, h5, h6, li, span, label, strong, em, .project-card, .skill, .tool'*/
-    
-  //);
   interactiveElements.forEach(el => {
     el.addEventListener('mouseenter', () => {
       cursorDot.classList.add('hovered');

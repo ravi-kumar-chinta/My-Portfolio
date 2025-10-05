@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 # Global Settings
 --------------------------------------------------------------*/
@@ -26,6 +25,79 @@
     --vertical-gradient: linear-gradient(to top, #12c2e9, #c471ed, #f64f59);
     --transition-default: all .4s ease;
 }   
+/*--------------------------------------------------------------
+# Global Settings (Updated)
+--------------------------------------------------------------*/
+
+/* ... (Existing @font-face and :root variables) ... */
+
+body {
+    font-family: var(--font-family);
+    font-weight: 300;
+    /* 💥 CRITICAL FIX: Prevents horizontal scrolling across the entire site */
+    overflow-x: hidden !important; 
+}
+
+/* ... (Existing color modes and scrollbar styles) ... */
+
+/*-------------------------------------------------------------
+# Custom Cursor Code (Updated for Mobile Responsiveness)
+--------------------------------------------------------------*/
+
+/* 1. Hide the default browser cursor */
+* {
+    cursor: none;
+}
+
+/* 2. Style the inner dot for the default state */
+.cursor-dot {
+    /* ... (Existing properties) ... */
+    /* Ensure the dot does not cause overflow, though small, it's safer */
+    max-width: 100vw;
+}
+
+/* 3. Style the outer gradient ring for the default state */
+.cursor-outline {
+    /* ... (Existing properties) ... */
+    /* 💥 CRITICAL FIX: Limits the cursor's boundary to the screen width */
+    max-width: 100vw !important;
+}
+
+/* 4. The CORRECTED hover effect: The whole circle now inverts text */
+.cursor-outline.hovered {
+    /* ... (Existing properties) ... */
+    /* Ensures the scaled size does not overflow the viewport */
+    max-width: 100vw !important;
+}
+
+/* 6. Style for the ripple effect on click */
+.click-ripple {
+    /* ... (Existing properties) ... */
+    /* 💥 CRITICAL FIX: The ripple animation often causes overflow, limit it here */
+    max-width: 100vw !important;
+}
+
+/* 7. Style for the ripple when the mouse stops */
+.stop-ripple {
+    /* ... (Existing properties) ... */
+    /* 💥 CRITICAL FIX: Prevents the stop ripple from causing overflow */
+    max-width: 100vw !important;
+}
+
+/* 8. Animation for the ripple */
+@keyframes ripple-effect {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 0.8;
+    }
+    to {
+        /* Reduce the final size of the ripple to minimize overflow risk */
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+    }
+}
 
 body{
     font-family: var(--font-family);
@@ -407,24 +479,14 @@ a:hover{
     color: var(--muted-text);
 }
 
-.hero-portrait .pic {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 45vw;
-    background-size: contain;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-image: url(../images/portrait.webp);
-}
+
 
 @media (max-width: 576px) {
     #hero {
         padding: 35px 0px 0px 0px;
     }
 
-    .hero-portrait {
+    /*.hero-portrait {
         position: relative;
         overflow: hidden;
         width: 100%;
@@ -439,13 +501,14 @@ a:hover{
         background-clip: content-box, border-box;
     }
 
+    
     .hero-portrait .pic {
         width: 100%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-image: url(../images/portrait.webp);
-    }
+    }*/
 
     .hero-content{
         margin-top: 35px;
@@ -529,94 +592,7 @@ a:hover{
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-#about{
-    padding: 100px 0px;
-    background-image: url(../images/grid.png);
-    background-size: contain;
-    min-height: 100vh;
-}
 
-.about-portrait{
-    display: flex;
-    padding: 30px 0px 30px 0px;
-    height: "100";
-    justify-content: center;
-    align-items: center;
-}
-
-.about-portrait::before {
-    content: "";
-    background-color: transparent;
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    z-index: -2;
-    box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
-    -webkit-box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
-    transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-}
-
-.about-portrait:hover::before {
-    transform: translate(-23px,-23px);
-    transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-}
-
-.about-portrait::after {
-    content: "";
-    background-color: transparent;
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    z-index: -2;
-    box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
-    -webkit-box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
-    transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-}
-
-.about-portrait:hover::after {
-    transform: translate(35px,30px);
-    transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-}
-
-.about-portrait .pic{
-    width: 70%;
-    height: auto;
-    border-radius: 0.5rem;
-    object-fit: cover;
-    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px #850dd5;
-    -webkit-box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px #850dd5;
-}
-
-#about .bio{
-    padding: 30px 0 30px 0;
-    color: var(--muted-text);
-    font-size: 15px;
-    word-spacing: 5px;
-}
-#about .edu-institute{
-    padding: 30px 0 30px 0;
-    color: var(--muted-text);
-    font-size: 15px;
-    word-spacing: 5px;
-}
-
-    @media (max-width: 576px) {
-        .about-portrait{
-            display: flex;
-            padding: 30px 36px 30px 36px;
-        }
-        .about-portrait .pic {
-            width: 90%;
-        }
-        #about .bio{
-            font-size: 14px;
-            padding: 30px 15px 30px 15px;
-        }
-    }
 
 /*--------------------------------------------------------------
 # Skills Section
