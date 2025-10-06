@@ -52,9 +52,8 @@ My-Portfolio/
 ---
 ## 📸 Preview  
 
-*(Add a screenshot or GIF of your portfolio here)*  
-Example:  
-![Portfolio Preview](Portolio Website.png)
+![Live Here..](Portolio Website.png)
+
 
 ---
 
@@ -65,4 +64,4 @@ Example:
 - 💬 [LeetCode](https://leetcode.com/yourusername)  
 - ✉️ **chintharavikumar9908@gmail.com**
 
----
+----
