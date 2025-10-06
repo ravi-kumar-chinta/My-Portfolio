@@ -1,46 +1,68 @@
-# Web Developer Portfolio - Using HTML, CSS, Bootstrap & JS
+# 🌐 Ravikumar's Portfolio Website
 
-> See live demo: [https://vijay-singh.com](https://vijay-singh.com)    |  Feel free to use but **credit appreciated** and a **⭐** to repo ;)
+Welcome to my **personal portfolio website**, showcasing my projects, skills, and achievements as a Computer Science Engineer.  
+This site is built to represent my work and learning journey in web development.
 
-![Developer Portoflio](https://github.com/itsvijaysingh/My-Portfolio/blob/main/Developer%20Portolio%20Website.png)
+---
 
+## 🔗 Live Demo  
+👉 [https://ravikumar-portfolio.vercel.app](https://ravikumar-portfolio.vercel.app)
 
-Hi there! I'm Vijay, and this is my portfolio website code built with HTML, CSS, Bootstrap, and a touch of JavaScript. Let's dive into the features:
+---
 
-> But, wait! Have any cool project ideas to share or need some work done? Just shoot me an email at hi@vijay-singh.com. Let's chat over a virtual coffee! 😊 And if you're wondering why you should consider working together, check out projects like **PfpFinder** (https://pfpfinder.com) (where you can find the best pfps - almost 50k+!), **Alt Text Generator** (https://alttext.tech/) (just upload an image to see what it is!), **Discord Lookup API** (https://github.com/itsvijaysingh/Discord-Lookup-API), and more! Check out my complete profile here: https://github.com/itsvijaysingh
+## 🧑‍💻 About Me  
+Hi, I’m **Chintha Ravikumar** — a passionate and creative developer who loves designing responsive, user-friendly web experiences.  
+I enjoy exploring modern web technologies and continuously improving my skills.
 
-## **Portfolio Features:**
+---
 
-* **Light/Dark Modes Supported 🌙☀️:**  Switch effortlessly between light and dark themes. Your preference is saved, even after you close the page!
-* **Clean Code 👍:** Well-formatted and easy to follow. 
-* **Real-World Showcase 💻:** Check out my actual projects!
-* **Optimized for Speed 🚀:**  SEO metadata, prefetching, and deferring for a snappy experience.
-* **Testimonials ✅:** Genuine reviews from friends and developers.
-* **SEO Optimed** Just Replace The Content at <head>
-* **And More!** See the details below.
-  
-## **Technologies Used:**
+## 🚀 Features  
+✅ Fully responsive design (works on mobile, tablet & desktop)  
+✅ Projects carousel with live demos  
+✅ Smooth scroll and scroll animations  
+✅ Light/Dark mode support  
+✅ Dynamic experience and skills section  
+✅ Contact section for collaboration  
 
-* HTML, CSS, Bootstrap, JavaScript
-* Owl Carousel Library (for Testimonials)
-* jQuery (to support Owl Carousel)
-* AOS Library (for cool fade effects)
-* Fonts: Augustina, Rubik, Dancing Script
-* Bootstrap Icons
+---
 
-## **Want to see it live? 👀**
+## 🛠️ Built With  
+- **HTML5**  
+- **CSS3 / Bootstrap / TailwindCSS**  
+- **JavaScript (ES6+)**  
+- **AOS (Animate on Scroll)**  
+- **Font Awesome / Icons**
 
-* Visit: [https://vijay-singh.com/](https://vijay-singh.com/)
-* Or, explore the code on GitHub: [https://github.com/itsvijaysingh/My-Portfolio/](https://github.com/itsvijaysingh/My-Portfolio/)
+---
 
-## **Why This Web Developer Portfolio Stands Out**
+## 📂 Project Structure  
 
-* **User Experience Focus:**  The dual theme and speed optimizations show I care about delivering a great experience.
-* **Attention to Detail:** Thoughtful font selections and animations add a polished touch. 
-* **Real Projects:**  This isn't just about tech skills, it's about what I can build!  
+```bash
+My-Portfolio/
+│
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│ ├── images/
+│ └── icons/
+├── README.md
+└── ...
+```
+---
+## 📸 Preview  
 
-## **Contact**
+*(Add a screenshot or GIF of your portfolio here)*  
+Example:  
+![Portfolio Preview](Portolio Website.png)
 
-Feel free to connect with me or leave feedback. I'm always learning and improving! 
+---
 
-> ~ [hi@vijay-singh.com](mailto:hi@vijay-singh.com)
+## 🤝 Connect With Me  
+
+- 💼 [LinkedIn](https://linkedin.com/in/chinta-ravi-kumar)  
+- 🧑‍💻 [GitHub](https://github.com/chinta-ravi-kumar)  
+- 💬 [LeetCode](https://leetcode.com/yourusername)  
+- ✉️ **chintharavikumar9908@gmail.com**
+
+---
