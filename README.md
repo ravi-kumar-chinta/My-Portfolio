@@ -6,7 +6,7 @@ This site is built to represent my work and learning journey in web development.
 ---
 
 ## 🔗 Live Demo  
-👉 [https://ravikumar-portfolio.vercel.app](https://ravikumar-portfolio.vercel.app)
+👉 [Livs here](https://ch-ravi-kumar-portfolio.vercel.app/)
 
 ---
 
@@ -52,7 +52,7 @@ My-Portfolio/
 ---
 ## 📸 Preview  
 
-![Live Here..](assets/images/Preview%20Image.png)
+![Preview Here..](assets/images/Preview%20Image.png)
 
 
 
