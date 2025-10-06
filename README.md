@@ -52,7 +52,7 @@ My-Portfolio/
 ---
 ## 📸 Preview  
 
-![Live Here..](Portolio Website.png)
+![Live Here..](..\images\Preview Image.png)
 
 
 ---
